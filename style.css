@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Very-dark-blue-mainbg: hsl(217, 54%, 11%);
+--Very-dark-blue-cardbg: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    font-family: Outfit , sans-serif;
+    background-color: var(--Very-dark-blue-mainbg);
+    color: var(--White);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    border-radius: 20px;
+    background-color: var(--Very-dark-blue-cardbg);
+}
+
+.header {
+    margin: 25px 25px 0 25px;
+    position: relative;
+    
+}
+
+.header img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.header .hover-view{
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    background-color: var(--Cyan);
+    border-radius: 10px;
+    transition: 1s ease;
+}
+
+.header .hover-view img {
+    width: 20%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.header .hover-view:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5 ease;
+}
+
+.body {
+    padding: 15px 25px 0 25px;
+}
+
+.body h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.body h4:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.body p {
+    font-weight: 300;
+    color: var(--Soft-blue);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.body .values {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.body .values .eth-values::before {
+    content: url(./images/icon-ethereum.svg);
+    margin-right: 5px;
+}
+
+.body .values .eth-values {
+    color: var(--Cyan);
+    font-weight: 400;
+}
+
+.body .values .days-left::before {
+    content: url(./images/icon-clock.svg);
+    margin-right: 5px;
+}
+
+.body .values .days-left {
+    color: var(--Soft-blue);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    margin: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 0.5px solid var(--Very-dark-blue-line);
+    padding-top: 20px;
+}
+
+.footer .img {
+    margin-right: 20px;
+}
+
+.footer .img img {
+    width: 30px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.footer .create-by {
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+
+.footer span {
+    color: var(--White);
+}
+
+.footer span:hover { 
+    color: var(--Cyan);
+    cursor: pointer;
+}
